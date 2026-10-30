@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upliftlab"
+version = "0.1.0"
+description = "Reproducible causal uplift modeling experiments and policy evaluation."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "See LICENSE"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

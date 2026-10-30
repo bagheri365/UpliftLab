@@ -1,0 +1,19 @@
+# Virtual environments and Python build artifacts
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local data, model artifacts, and secrets
+data/raw/
+data/interim/
+data/processed/
+models/
+.env
+.DS_Store
