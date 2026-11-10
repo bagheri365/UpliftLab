@@ -1,0 +1,2 @@
+# Install after requirements-modeling.txt (EconML 0.17 supports Python 3.12/macOS arm64).
+econml>=0.17,<0.18
