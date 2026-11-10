@@ -17,3 +17,4 @@ data/processed/
 models/
 .env
 .DS_Store
+*.patch
