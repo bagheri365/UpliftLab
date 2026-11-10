@@ -1,0 +1,42 @@
+{
+  "study_status": "draft",
+  "decision_record": "Exploratory proposal selected after inspecting M3-M7 validation results; NOT prospectively preregistered.",
+  "primary_analysis": {
+    "learner": "s_learner",
+    "comparator": "random_at_equal_budget",
+    "budget": 0.3,
+    "cost": 0.0,
+    "metric": "ipw_net_policy_value_difference"
+  },
+  "secondary_analysis": {
+    "learner": "dr_learner",
+    "comparator": "random_at_equal_budget",
+    "budget": 0.5,
+    "cost": 0.03,
+    "purpose": "hypothetical-cost sensitivity only"
+  },
+  "causal_assumptions": {
+    "evidence_reviewed": false,
+    "verified_randomization": false,
+    "verified_propensity": false
+  },
+  "feature_policy": {
+    "exclude_unverified_relative_time": true,
+    "requires_retraining": true,
+    "excluded_columns": [
+      "historical_recency_days_dataset_relative",
+      "historical_lines_last_30d_dataset_relative",
+      "historical_lines_last_90d_dataset_relative"
+    ]
+  },
+  "uncertainty": {
+    "method": "paired_arm_stratified_bootstrap",
+    "repetitions_proposed": 2000,
+    "scope": "fixed scores and policies, conditional on assumed assignment propensity",
+    "multiplicity": "One primary comparison; secondary analyses labeled exploratory"
+  },
+  "test_policy": {
+    "allow_test_access": false,
+    "final_gate": "separate_manual_approval_required"
+  }
+}
