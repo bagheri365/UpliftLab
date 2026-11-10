@@ -14,7 +14,7 @@ htmlcov/
 data/raw/
 data/interim/
 data/processed/
-models/
+/models/
 .env
 .DS_Store
 *.patch
